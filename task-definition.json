@@ -20,7 +20,15 @@
       "mountPoints": [],
       "volumesFrom": [],
       "ulimits": [],
-      "systemControls": []
+      "systemControls": [],
+      "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/mydjangoapp",
+        "awslogs-region": "ap-northeast-2",
+        "awslogs-stream-prefix": "ecs"
+      }
+    }
     }
   ],
   "family": "my-task",
