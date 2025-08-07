@@ -12,7 +12,7 @@ env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: mydjangoapp
   ECS_CLUSTER: my-cluster
-  ECS_SERVICE: my-task-service-57muzs9x
+  ECS_SERVICE: my-task-service-g44w9nuy
   ECS_TASK_DEFINITION: ./task-definition.json
   CONTAINER_NAME: web
 
@@ -29,7 +29,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::307946652648:role/ecs_test
+          role-to-assume: arn:aws:iam::307946652648:role/ecs-test
           aws-region: ${{ env.AWS_REGION }}
           
       - name: Login to ECR
