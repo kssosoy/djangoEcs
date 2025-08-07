@@ -2,7 +2,7 @@
   "taskDefinitionArn": "arn:aws:ecs:us-east-1:307946652648:task-definition/my-task:2",
   "containerDefinitions": [
     {
-      "name": "nginx",
+      "name": "web",
       "image": "nginx",
       "cpu": 0,
       "portMappings": [
