@@ -12,7 +12,7 @@ env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: mydjangoapp
   ECS_CLUSTER: my-cluster
-  ECS_SERVICE: my-task-service-g44w9nuy
+  ECS_SERVICE: my-task-service-2eqco1y4
   ECS_TASK_DEFINITION: ./task-definition.json
   CONTAINER_NAME: web
 
