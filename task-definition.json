@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:307946652648:task-definition/my-task:2",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:307946652648:task-definition/my-task:8",
   "containerDefinitions": [
     {
       "name": "web",
-      "image": "nginx",
+      "image": "307946652648.dkr.ecr.ap-northeast-2.amazonaws.com/mydjangoapp:e23909c81d5c8e204c5cf18d4e8fcbb9fe2c0ba8",
       "cpu": 0,
       "portMappings": [
         {
@@ -16,10 +16,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "systemControls": []
     }
   ],
@@ -27,12 +25,18 @@
   "taskRoleArn": "arn:aws:iam::307946652648:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::307946652648:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 2,
+  "revision": 8,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
     {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
       "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
@@ -55,7 +59,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2025-08-07T00:09:02.505Z",
-  "registeredBy": "arn:aws:iam::307946652648:root",
+  "registeredAt": "2025-08-07T00:35:36.628Z",
+  "registeredBy": "arn:aws:sts::307946652648:assumed-role/ecs-test/GitHubActions",
   "tags": []
 }
